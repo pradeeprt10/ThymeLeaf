@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1 th:text="${name}"></h1>
+	<h1 th:text="${name1}"></h1>
+	<ul>
+		<li th:each="n : ${name1}"><span th:text="${n}"></span></li>
+	</ul>
+	<h1>
+		<span th:text="${isActive}? 'Active':'InActive'"></span>
+	</h1>
+	
+	<h1>
+		<span th:if="${gen}=='M'">Male</span>
+		<span th:unless="${gen}=='M'">Female</span>
+	</h1>
+</body>
+</html>
